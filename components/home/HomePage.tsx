@@ -14,7 +14,7 @@ import { useLocalStorage } from "@/hooks/useLocalStorage";
 
 export default function HomePage() {
   const [city, setCity] = useLocalStorage("evyatra:city", "Delhi NCR");
-  const [carId, setCarId] = useLocalStorage("evyatra:car", "");
+  const [carId, setCarId] = useLocalStorage("evyatra:car", "Hyn-IONIQ 5");
   const [favCars, setFavCars] = useLocalStorage<string[]>("evyatra:fav-cars", []);
   const [favStations, setFavStations] = useLocalStorage<string[]>("evyatra:fav-stations", []);
   const [filter, setFilter] = useState<StationFilter>("all");

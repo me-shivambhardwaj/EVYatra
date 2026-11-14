@@ -26,7 +26,12 @@ export default function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5 text-xs text-brand-mint/70 sm:px-8">
-          <p>© {new Date().getFullYear()} EVYatra. Demo data only; prices and availability are illustrative.</p>
+          <p>
+  © {new Date().getFullYear()} EVYatra. Created by{" "}
+  <a href="https://www.linkedin.com/in/shivam316/" target="_blank" rel="noopener noreferrer"
+    className="font-semibold text-white hover:underline">Shivam</a>.
+  {" "}Prices and availability are indicative.
+</p>
           <a href="#top" aria-label="Back to top" className="shrink-0 rounded-full border border-white/20 p-2 hover:bg-white/10"><ArrowUp size={14} /></a>
         </div>
       </div>

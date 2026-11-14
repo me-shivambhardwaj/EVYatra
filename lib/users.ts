@@ -10,12 +10,12 @@ export interface StoredUser extends UserPayload {
 const users: StoredUser[] = [
   {
     id: "usr-demo-1",
-    name: "Rahul Sharma",
-    email: "rahul@evyatra.in",
+    name: "Shivam Sharma",
+    email: "shivam@evyatra.in",
     passwordHash: hashPassword("password123"),
-    phone: "+91 98765 43210",
+    phone: "+91 9992629295",
     city: "Delhi NCR",
-    preferredCar: "Porsche Taycan",
+    preferredCar: "Hyn-IONIQ 5",
     createdAt: new Date().toISOString(),
   },
   {

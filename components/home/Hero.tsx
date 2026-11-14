@@ -23,7 +23,7 @@ export default function Hero({ city, onCity, carId, onCar, cars, previewCar, nea
           Find the right EV. Find the right charger.
         </h1>
         <p className="mt-6 max-w-md text-lg leading-relaxed text-muted">
-          Compare mass-market and luxury cars, check compatible charging stations near you, and plan your route before you leave.
+          Compare electric cars, check compatible charging stations near you, and plan your route before you leave.
         </p>
 
         <form

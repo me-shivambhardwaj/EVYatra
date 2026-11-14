@@ -20,7 +20,7 @@ users_db = {
         "password_hash": hashlib.sha256("password123".encode()).hexdigest(),
         "phone": "+91 9992629295",
         "city": "Delhi NCR",
-        "preferred_car": "Porsche Taycan"
+        "preferred_car": "Hyn-IONIQ 5"
     }
 }
 
