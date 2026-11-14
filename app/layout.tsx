@@ -3,8 +3,22 @@ import "./globals.css";
 import { ToastProvider } from "@/components/ui/Toast";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://evyatra.netlify.app"),
   title: "EVYatra – Find the right EV. Find the right charger.",
   description: "Compare electric cars, check compatible charging stations near you, and plan your route in India.",
+  openGraph: {
+    title: "EVYatra – Find the right EV. Find the right charger.",
+    description: "Compare electric cars, check compatible charging stations near you, and plan your route in India.",
+    url: "https://evyatra.netlify.app",
+    siteName: "EVYatra",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "EVYatra – Find the right EV. Find the right charger.",
+    description: "Compare electric cars, check compatible charging stations near you, and plan your route in India.",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

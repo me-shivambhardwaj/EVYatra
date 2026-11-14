@@ -15,7 +15,7 @@ export const EVS: EV[] = [
     maxDcKw: 320,
     connectors: ["CCS2", "Type 2"],
     segment: "luxury",
-    image: "/cars/porsche-taycan.png",
+    image: "/cars/porsche-taycan.webp",
   },
 
   { 
@@ -29,7 +29,7 @@ export const EVS: EV[] = [
     maxDcKw : 220,
     connectors : ["CCS2", "Type 2"],
     segment : "premium",
-    image : "/cars/hyundai-ioniq-5.png",
+    image : "/cars/hyundai-ioniq-5.webp",
 
   },
   {
@@ -43,7 +43,7 @@ export const EVS: EV[] = [
     maxDcKw: 250,
     connectors: ["CCS2", "Type 2"],
     segment: "luxury",
-    image: "/cars/tesla-model-y.png",
+    image: "/cars/tesla-model-y.webp",
   },
   {
     id: "mercedes-eqs-suv",
@@ -56,7 +56,7 @@ export const EVS: EV[] = [
     maxDcKw: 200,
     connectors: ["CCS2", "Type 2"],
     segment: "luxury",
-    image: "/cars/mercedes-eqs-suv.png",
+    image: "/cars/mercedes-eqs-suv.webp",
   },
   {
     id: "bmw-i7",
@@ -69,7 +69,7 @@ export const EVS: EV[] = [
     maxDcKw: 195,
     connectors: ["CCS2", "Type 2"],
     segment: "luxury",
-    image: "/cars/bmw-i7.png",
+    image: "/cars/bmw-i7.webp",
   },
   {
     id: "audi-q8-e-tron",
@@ -82,7 +82,7 @@ export const EVS: EV[] = [
     maxDcKw: 170,
     connectors: ["CCS2", "Type 2"],
     segment: "luxury",
-    image: "/cars/audi-q8-e-tron.png",
+    image: "/cars/audi-q8-e-tron.webp",
   },
   {
     id: "porsche-macan-electric",
@@ -95,7 +95,7 @@ export const EVS: EV[] = [
     maxDcKw: 270,
     connectors: ["CCS2", "Type 2"],
     segment: "luxury",
-    image: "/cars/porsche-macan-electric.png",
+    image: "/cars/porsche-macan-electric.webp",
   },
   {
     id: "mercedes-eqe-suv",
@@ -108,7 +108,7 @@ export const EVS: EV[] = [
     maxDcKw: 170,
     connectors: ["CCS2", "Type 2"],
     segment: "luxury",
-    image: "/cars/mercedes-eqe-suv.png",
+    image: "/cars/mercedes-eqe-suv.webp",
   },
   {
     id: "bmw-ix",
@@ -121,7 +121,7 @@ export const EVS: EV[] = [
     maxDcKw: 150,
     connectors: ["CCS2", "Type 2"],
     segment: "luxury",
-    image: "/cars/bmw-ix.png",
+    image: "/cars/bmw-ix.webp",
   },
   {
     id: "bmw-i5",
@@ -134,7 +134,7 @@ export const EVS: EV[] = [
     maxDcKw: 205,
     connectors: ["CCS2", "Type 2"],
     segment: "luxury",
-    image: "/cars/bmw-i5.png",
+    image: "/cars/bmw-i5.webp",
   },
   {
     id: "audi-q6-e-tron",
@@ -147,7 +147,7 @@ export const EVS: EV[] = [
     maxDcKw: 270,
     connectors: ["CCS2", "Type 2"],
     segment: "luxury",
-    image: "/cars/audi-q6-e-tron.png",
+    image: "/cars/audi-q6-e-tron.webp",
   },
   {
     id: "kia-ev9",
@@ -160,7 +160,7 @@ export const EVS: EV[] = [
     maxDcKw: 350,
     connectors: ["CCS2", "Type 2"],
     segment: "luxury",
-    image: "/cars/kia-ev9.png",
+    image: "/cars/kia-ev9.webp",
   },
   {
     id: "bmw-i4",
@@ -173,7 +173,7 @@ export const EVS: EV[] = [
     maxDcKw: 205,
     connectors: ["CCS2", "Type 2"],
     segment: "luxury",
-    image: "/cars/bmw-i4.png",
+    image: "/cars/bmw-i4.webp",
   },
   {
     id: "mercedes-eqb",
@@ -186,7 +186,7 @@ export const EVS: EV[] = [
     maxDcKw: 100,
     connectors: ["CCS2", "Type 2"],
     segment: "luxury",
-    image: "/cars/mercedes-eqb.png",
+    image: "/cars/mercedes-eqb.webp",
   },
   {
     id: "bmw-ix1",
@@ -199,7 +199,7 @@ export const EVS: EV[] = [
     maxDcKw: 130,
     connectors: ["CCS2", "Type 2"],
     segment: "luxury",
-    image: "/cars/bmw-ix1.png",
+    image: "/cars/bmw-ix1.webp",
   },
   {
     id: "mercedes-eqa",
@@ -212,7 +212,7 @@ export const EVS: EV[] = [
     maxDcKw: 100,
     connectors: ["CCS2", "Type 2"],
     segment: "luxury",
-    image: "/cars/mercedes-eqa.png",
+    image: "/cars/mercedes-eqa.webp",
   },
   {
     id: "mg-cyberster",
@@ -225,7 +225,7 @@ export const EVS: EV[] = [
     maxDcKw: 144,
     connectors: ["CCS2", "Type 2"],
     segment: "premium",
-    image: "/cars/mg-cyberster.png",
+    image: "/cars/mg-cyberster.webp",
   },
   {
     id: "kia-ev6",
@@ -238,7 +238,7 @@ export const EVS: EV[] = [
     maxDcKw: 350,
     connectors: ["CCS2", "Type 2"],
     segment: "premium",
-    image: "/cars/kia-ev6.png",
+    image: "/cars/kia-ev6.webp",
   },
   {
     id: "volvo-ex40",
@@ -251,7 +251,7 @@ export const EVS: EV[] = [
     maxDcKw: 150,
     connectors: ["CCS2", "Type 2"],
     segment: "luxury",
-    image: "/cars/volvo-ex40.png",
+    image: "/cars/volvo-ex40.webp",
   },
   {
     id: "byd-sealion-7",
@@ -264,7 +264,7 @@ export const EVS: EV[] = [
     maxDcKw: 230,
     connectors: ["CCS2", "Type 2"],
     segment: "premium",
-    image: "/cars/byd-sealion-7.png",
+    image: "/cars/byd-sealion-7.webp",
   },
   {
     id: "byd-seal",
@@ -277,7 +277,7 @@ export const EVS: EV[] = [
     maxDcKw: 150,
     connectors: ["CCS2", "Type 2"],
     segment: "premium",
-    image: "/cars/byd-seal.png",
+    image: "/cars/byd-seal.webp",
   },
   {
     id: "byd-emax-7",
@@ -290,7 +290,7 @@ export const EVS: EV[] = [
     maxDcKw: 115,
     connectors: ["CCS2", "Type 2"],
     segment: "premium",
-    image: "/cars/byd-emax-7.png",
+    image: "/cars/byd-emax-7.webp",
   },
   {
     id: "byd-atto-3",
@@ -303,7 +303,7 @@ export const EVS: EV[] = [
     maxDcKw: 88,
     connectors: ["CCS2", "Type 2"],
     segment: "premium",
-    image: "/cars/byd-atto-3.png",
+    image: "/cars/byd-atto-3.webp",
   },
 
   // --- Mass Market EVs (Placed below, filtered by default) ---
@@ -318,7 +318,7 @@ export const EVS: EV[] = [
     maxDcKw: 70,
     connectors: ["CCS2", "Type 2"],
     segment: "mass",
-    image: "/cars/tata-curvv-ev.png",
+    image: "/cars/tata-curvv-ev.webp",
   },
   {
     id: "mahindra-be6",
@@ -331,7 +331,7 @@ export const EVS: EV[] = [
     maxDcKw: 140,
     connectors: ["CCS2", "Type 2"],
     segment: "mass",
-    image: "/cars/mahindra-be6.png",
+    image: "/cars/mahindra-be6.webp",
   },
   {
     id: "hyundai-creta-electric",
@@ -344,7 +344,7 @@ export const EVS: EV[] = [
     maxDcKw: 100,
     connectors: ["CCS2", "Type 2"],
     segment: "mass",
-    image: "/cars/hyundai-creta-electric.png",
+    image: "/cars/hyundai-creta-electric.webp",
   },
   {
     id: "mg-zs-ev",
@@ -357,7 +357,7 @@ export const EVS: EV[] = [
     maxDcKw: 76,
     connectors: ["CCS2", "Type 2"],
     segment: "mass",
-    image: "/cars/mg-zs-ev.png",
+    image: "/cars/mg-zs-ev.webp",
   },
   {id : "MG-M9-EV",
   name : "M9 EV",
@@ -369,7 +369,7 @@ export const EVS: EV[] = [
   maxDcKw : 70,
   connectors : ["CCS2", "Type 2"],
   segment : "mass",
-  image : "/cars/mg-m9-ev.png"
+  image : "/cars/mg-m9-ev.webp"
 
   },
   {
@@ -383,7 +383,7 @@ export const EVS: EV[] = [
     maxDcKw: 50,
     connectors: ["CCS2", "Type 2"],
     segment: "mass",
-    image: "/cars/mahindra-xuv400.png",
+    image: "/cars/mahindra-xuv400.webp",
   },
   {
     id: "mg-windsor-ev",
@@ -396,7 +396,7 @@ export const EVS: EV[] = [
     maxDcKw: 45,
     connectors: ["CCS2", "Type 2"],
     segment: "mass",
-    image: "/cars/mg-windsor-ev.png",
+    image: "/cars/mg-windsor-ev.webp",
   },
   {
     id: "tata-nexon-ev",
@@ -409,7 +409,7 @@ export const EVS: EV[] = [
     maxDcKw: 60,
     connectors: ["CCS2", "Type 2"],
     segment: "mass",
-    image: "/cars/tata-nexon-ev.png",
+    image: "/cars/tata-nexon-ev.webp",
   },
   {
     id: "citroen-ec3",
@@ -422,7 +422,7 @@ export const EVS: EV[] = [
     maxDcKw: 30,
     connectors: ["CCS2", "Type 2"],
     segment: "mass",
-    image: "/cars/citroen-ec3.png",
+    image: "/cars/citroen-ec3.webp",
   },
   {
     id: "tata-punch-ev",
@@ -435,7 +435,7 @@ export const EVS: EV[] = [
     maxDcKw: 50,
     connectors: ["CCS2", "Type 2"],
     segment: "mass",
-    image: "/cars/tata-punch-ev.png",
+    image: "/cars/tata-punch-ev.webp",
   },
   {
     id: "tata-tiago-ev",
@@ -448,7 +448,7 @@ export const EVS: EV[] = [
     maxDcKw: 25,
     connectors: ["CCS2", "Type 2"],
     segment: "mass",
-    image: "/cars/tata-tiago-ev.png",
+    image: "/cars/tata-tiago-ev.webp",
   },
   {
     id: "mg-comet-ev",
@@ -461,6 +461,6 @@ export const EVS: EV[] = [
     maxDcKw: 0,
     connectors: ["Type 2"],
     segment: "mass",
-    image: "/cars/mg-comet-ev.png",
+    image: "/cars/mg-comet-ev.webp",
   },
 ];

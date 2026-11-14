@@ -274,9 +274,9 @@ export default function TripPlanner({ cars, selectedCarId, onSelectCar }: Props)
         </div>
 
         {/* Main Planning Grid */}
-        <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_1.1fr]">
+        <div className="mt-8 grid items-start gap-8 lg:grid-cols-[1fr_1.1fr]">
           {/* Controls Column */}
-          <div className="flex flex-col gap-6 rounded-3xl bg-white p-6 shadow-soft ring-1 ring-line">
+          <div className="flex flex-col gap-6 rounded-3xl bg-white p-6 shadow-soft ring-1 ring-line lg:sticky lg:top-24">
             <h3 className="text-lg font-bold text-ink flex items-center gap-2">
               <Car className="text-brand" size={20} /> Trip Parameters
             </h3>
@@ -364,7 +364,7 @@ export default function TripPlanner({ cars, selectedCarId, onSelectCar }: Props)
             </div>
 
             {/* Car Snapshot & Range Status Card */}
-            <div className="mt-auto flex items-center gap-4 rounded-2xl bg-gradient-to-br from-brand-soft/50 to-brand-mint/30 p-4 ring-1 ring-brand/20">
+            <div className="flex items-center gap-4 rounded-2xl bg-gradient-to-br from-brand-soft/50 to-brand-mint/30 p-4 ring-1 ring-brand/20">
               <div className="relative h-20 w-28 shrink-0 flex items-center justify-center overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-line">
                 {currentCar.image ? (
                   <img
@@ -380,7 +380,7 @@ export default function TripPlanner({ cars, selectedCarId, onSelectCar }: Props)
                 <div className="flex items-center gap-2">
                   <p className="text-xs font-bold text-muted">{currentCar.brand}</p>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-ink bg-white/80 px-2 py-0.5 rounded shadow-xs">
-                    {currentCar.segment}
+                    {currentCar.rangeKm} km range
                   </span>
                 </div>
                 <h4 className="text-base font-extrabold text-ink">{currentCar.name}</h4>
@@ -427,7 +427,7 @@ export default function TripPlanner({ cars, selectedCarId, onSelectCar }: Props)
             </div>
 
             {/* Quick Metrics Bar */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 xl:grid-cols-4 gap-3">
               <div className="rounded-2xl bg-white p-4 shadow-soft ring-1 ring-line">
                 <span className="flex items-center gap-1 text-xs font-semibold text-muted">
                   <Route size={13} className="text-brand" /> Distance
@@ -452,9 +452,9 @@ export default function TripPlanner({ cars, selectedCarId, onSelectCar }: Props)
                 <span className="flex items-center gap-1 text-xs font-semibold text-muted">
                   <IndianRupee size={13} className="text-brand" /> Charging Cost
                 </span>
-                <p className="mt-1 text-xl font-extrabold text-ink">₹{estCostInr}</p>
+                <p className="mt-1 text-xl font-extrabold text-ink">₹2.8/km</p>
                 <span className="text-[11px] text-emerald-600 font-semibold">
-                  ~₹{(estCostInr / tripDistance).toFixed(1)}/km (65% vs Petrol)
+                  65% cheaper than petrol
                 </span>
               </div>
 
@@ -531,7 +531,7 @@ export default function TripPlanner({ cars, selectedCarId, onSelectCar }: Props)
                       <CheckCircle2 size={14} />
                     </div>
                     <div>
-                      <p className="font-bold text-ink text-sm">Non-stop Scenic Cruise</p>
+                      <p className="font-bold text-ink text-sm">No charging stop needed</p>
                       <p className="text-xs text-muted">
                         No pit-stops needed for this distance. Relax and enjoy the electric drive!
                       </p>
@@ -559,7 +559,7 @@ export default function TripPlanner({ cars, selectedCarId, onSelectCar }: Props)
               </div>
 
               {/* Action Button */}
-              <div className="mt-6 pt-5 border-t border-line flex flex-wrap items-center justify-between gap-4">
+              <div className="mt-6 pt-5 border-t border-line flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
                 <span className="text-xs text-muted">
                   Ready to go? Launch Google Maps with programmed stops.
                 </span>
@@ -567,7 +567,7 @@ export default function TripPlanner({ cars, selectedCarId, onSelectCar }: Props)
                   href={mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-2xl bg-brand px-5 py-3 text-sm font-bold text-white shadow-md shadow-brand/20 transition-all hover:bg-brand-dark"
+                  className="sticky bottom-4 z-20 sm:static inline-flex items-center justify-center gap-2 rounded-2xl bg-brand px-5 py-3 text-sm font-bold text-white shadow-lg shadow-brand/30 sm:shadow-md sm:shadow-brand/20 transition-all hover:bg-brand-dark text-center"
                 >
                   <Navigation size={16} /> Open Route in Google Maps
                 </a>

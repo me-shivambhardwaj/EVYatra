@@ -62,6 +62,7 @@ export default function NearbyStations({ stations, city, car, filter, onFilter, 
                       <img
                         src={`/stations/${s.id}.jpg`}
                         alt={s.name}
+                        loading="lazy"
                         onError={() => setImgErrors((prev) => ({ ...prev, [s.id]: true }))}
                         className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />

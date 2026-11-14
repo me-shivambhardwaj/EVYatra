@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Car } from "lucide-react";
 import type { EV } from "@/lib/types";
 
-// Looks for /public/cars/<ev.id>.png, then .jpg, then .webp, then falls back to an icon.
-const EXTS = ["png", "jpg", "webp"];
+// Looks for /public/cars/<ev.id>.webp, then .png, then .jpg, then falls back to an icon.
+const EXTS = ["webp", "png", "jpg"];
 
 export default function CarImage({ ev, iconSize = 56 }: { ev: EV; iconSize?: number }) {
   const [step, setStep] = useState(0);
@@ -15,6 +15,7 @@ export default function CarImage({ ev, iconSize = 56 }: { ev: EV; iconSize?: num
       key={`${ev.id}-${step}`}
       src={`/cars/${ev.id}.${EXTS[step]}`}
       alt={`${ev.brand} ${ev.name}`}
+      loading="lazy"
       onError={() => setStep((s) => s + 1)}
       className="h-full w-full object-contain p-3"
     />

@@ -6,7 +6,7 @@ import { formatPrice } from "@/lib/format";
 import RangeBar from "@/components/ui/RangeBar";
 import { Car } from "lucide-react";
 
-const EXTS = ["png", "jpg", "webp"];
+const EXTS = ["webp", "png", "jpg"];
 function CarImage({ ev }: { ev: EV }) {
   const custom = (ev as EV & { image?: string }).image; // used if your data has an image field
   const sources = [...(custom ? [custom] : []), ...EXTS.map((x) => `/cars/${ev.id}.${x}`)];
@@ -15,6 +15,7 @@ function CarImage({ ev }: { ev: EV }) {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img key={sources[step]} src={sources[step]} alt={`${ev.brand} ${ev.name}`}
+      loading="lazy"
       onError={() => setStep((s) => s + 1)} className="h-full w-full object-contain p-3" />
   );
 }

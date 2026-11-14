@@ -7,7 +7,7 @@ import AuthModal from "@/components/auth/AuthModal";
 
 const LINKS = [
   { label: "Chargers", href: "#chargers" },
-  { label: "Ev Cars", href: "#cars" },
+  { label: "EV Cars", href: "#cars" },
   { label: "India Impact", href: "#impact" },
   { label: "Trip planner", href: "#trip-planner" },
 ];
