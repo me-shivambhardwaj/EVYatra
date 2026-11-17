@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ToastProvider } from "@/components/ui/Toast";
+import ChatWidget from "@/components/chat/ChatWidget";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://evyatra.netlify.app"),
@@ -29,7 +30,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-sans"><ToastProvider>{children}</ToastProvider></body>
+      <body className="font-sans">
+        <ToastProvider>
+          {children}
+          <ChatWidget />
+        </ToastProvider>
+      </body>
     </html>
   );
 }

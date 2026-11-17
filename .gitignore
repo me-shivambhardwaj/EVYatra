@@ -1,1 +1,10 @@
 node_modules
+
+.env
+.env.local
+evyatra-ai/.env
+evyatra-ai/venv/
+evyatra-ai/db/
+__pycache__/
+.next/
+node_modules/
