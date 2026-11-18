@@ -19,6 +19,7 @@ The Tata Tiago EV is an electric vehicle available in the Indian market, manufac
 - **DC Fast Charging**: Supports CCS2 connector with up to 25 kW DC fast charging. Recharges from 10% to 80% in approximately 58 minutes on a compatible DC rapid highway charger.
 
 ## Key Features & Practicality
+- Boot space of 240 litres.
 - Equipped with smart regenerative braking to maximize energy recovery in city traffic.
 - Connected infotainment system with real-time battery analytics and range estimation.
 - Engineered with IP67-rated waterproof battery pack and safety systems suited to Indian road environments.

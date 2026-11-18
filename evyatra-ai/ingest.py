@@ -72,14 +72,35 @@ def build_cars_summary():
         claimed_str = get_field(text, r"Claimed[^*]*Range[^*]*")
         real_str = get_field(text, r"Real-world[^*]*Range[^*]*")
 
+        # battery kWh numeric
+        bat_m = re.findall(r'(\d+(?:\.\d+)?)\s*kWh', bat_str, re.IGNORECASE)
+        bats = [float(b) for b in bat_m]
+        bat_kwh = bats[-1] if bats else 30.0
+
+        # claimed range numeric
+        claim_nums = [int(n) for n in re.findall(r'\b\d+\b', claimed_str)]
+        claimed_km = claim_nums[-1] if claim_nums else 300
+
+        # real range numeric
+        real_nums = [int(n) for n in re.findall(r'\b\d+\b', real_str)]
+        real_min = real_nums[0] if real_nums else int(claimed_km * 0.7)
+        real_max = real_nums[-1] if len(real_nums) > 1 else real_min
+        real_avg = (real_min + real_max) / 2.0
+
         cars.append({
             "name": name,
             "file": p.name,
+            "stem": p.stem,
             "price": price_str,
             "price_min_lakh": min_p,
             "battery": bat_str,
+            "battery_kwh": bat_kwh,
             "claimed_range": claimed_str,
-            "real_range": real_str
+            "claimed_range_km": claimed_km,
+            "real_range": real_str,
+            "real_range_min_km": real_min,
+            "real_range_max_km": real_max,
+            "real_range_km": real_avg
         })
 
     cars.sort(key=lambda x: x["price_min_lakh"])
