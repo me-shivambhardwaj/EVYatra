@@ -8,7 +8,7 @@ The Tesla Model Y is an electric vehicle available in the Indian market, manufac
 ## Specifications (India Spec)
 - **Brand**: Tesla
 - **Model**: Model Y
-- **Ex-showroom Price (India)**: Approximately ₹120.00 Lakh
+- **Ex-showroom Price (India)**: Approximately ₹120.00 Lakh (₹1.20 Cr)
 - **Battery Capacity**: 100.0 kWh lithium-ion battery pack
 - **Claimed Range**: 652 km
 - **Real-world Estimated Range**: 456 km to 554 km depending on road conditions, payload, and driving style

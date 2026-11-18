@@ -8,7 +8,7 @@ The BMW iX is an electric vehicle available in the Indian market, manufactured b
 ## Specifications (India Spec)
 - **Brand**: BMW
 - **Model**: iX
-- **Ex-showroom Price (India)**: Approximately ₹121.00 Lakh
+- **Ex-showroom Price (India)**: Approximately ₹121.00 Lakh (₹1.21 Cr)
 - **Battery Capacity**: 76.6 kWh lithium-ion battery pack
 - **Claimed Range**: 425 km
 - **Real-world Estimated Range**: 297 km to 361 km depending on road conditions, payload, and driving style

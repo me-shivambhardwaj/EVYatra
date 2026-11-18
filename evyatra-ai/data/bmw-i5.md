@@ -8,7 +8,7 @@ The BMW i5 is an electric vehicle available in the Indian market, manufactured b
 ## Specifications (India Spec)
 - **Brand**: BMW
 - **Model**: i5
-- **Ex-showroom Price (India)**: Approximately ₹120.00 Lakh
+- **Ex-showroom Price (India)**: Approximately ₹120.00 Lakh (₹1.20 Cr)
 - **Battery Capacity**: 81.2 kWh lithium-ion battery pack
 - **Claimed Range**: 516 km
 - **Real-world Estimated Range**: 361 km to 438 km depending on road conditions, payload, and driving style

@@ -8,7 +8,7 @@ The Porsche Taycan is an electric vehicle available in the Indian market, manufa
 ## Specifications (India Spec)
 - **Brand**: Porsche
 - **Model**: Taycan
-- **Ex-showroom Price (India)**: Approximately ₹161.00 Lakh
+- **Ex-showroom Price (India)**: Approximately ₹161.00 Lakh (₹1.61 Cr)
 - **Battery Capacity**: 89.0 kWh lithium-ion battery pack
 - **Claimed Range**: 678 km
 - **Real-world Estimated Range**: 474 km to 576 km depending on road conditions, payload, and driving style

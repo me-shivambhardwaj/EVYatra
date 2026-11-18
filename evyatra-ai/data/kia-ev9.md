@@ -8,7 +8,7 @@ The Kia EV9 is an electric vehicle available in the Indian market, manufactured 
 ## Specifications (India Spec)
 - **Brand**: Kia
 - **Model**: EV9
-- **Ex-showroom Price (India)**: Approximately ₹130.00 Lakh
+- **Ex-showroom Price (India)**: Approximately ₹130.00 Lakh (₹1.30 Cr)
 - **Battery Capacity**: 99.8 kWh lithium-ion battery pack
 - **Claimed Range**: 561 km
 - **Real-world Estimated Range**: 392 km to 476 km depending on road conditions, payload, and driving style

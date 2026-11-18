@@ -14,6 +14,7 @@ interface ChatMessage {
 
 // Curated list of cars for the chip dropdown
 const CAR_OPTIONS = [
+  "All cars",
   "Hyundai Ioniq 5",
   "Tata Nexon EV",
   "Tata Punch EV",
@@ -23,7 +24,7 @@ const CAR_OPTIONS = [
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedCar, setSelectedCar] = useState("Hyundai Ioniq 5");
+  const [selectedCar, setSelectedCar] = useState("All cars");
   const [carDropdownOpen, setCarDropdownOpen] = useState(false);
   const [userName, setUserName] = useState("there");
   const [input, setInput] = useState("");
@@ -33,12 +34,40 @@ export default function ChatWidget() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  const isAllCars = selectedCar === "All cars";
+
   // Dynamic suggestion chips based on selected car
-  const suggestionChips = [
-    `${selectedCar} price`,
-    `${selectedCar} range`,
-    `${selectedCar} charging time`,
-  ];
+  const suggestionChips = isAllCars
+    ? [
+        "Best EV under ₹15L",
+        "Compare Nexon EV and Punch EV",
+        "Charger types",
+      ]
+    : [
+        `${selectedCar} price`,
+        `${selectedCar} range`,
+        `${selectedCar} charging time`,
+      ];
+
+  // Retrieve stored trips and expenses from localStorage
+  const getStoredExpenses = (): unknown[] => {
+    if (typeof window === "undefined") return [];
+    try {
+      const rawExpenses = localStorage.getItem("evyatra:expenses");
+      if (rawExpenses) {
+        const parsed = JSON.parse(rawExpenses);
+        if (Array.isArray(parsed)) return parsed;
+      }
+      const rawTrips = localStorage.getItem("evyatra:trips");
+      if (rawTrips) {
+        const parsed = JSON.parse(rawTrips);
+        if (Array.isArray(parsed)) return parsed;
+      }
+    } catch {
+      // Fallback stays as empty
+    }
+    return [];
+  };
 
   // Fetch first name from /api/auth/me (else fallback to "there")
   useEffect(() => {
@@ -89,18 +118,21 @@ export default function ChatWidget() {
   useEffect(() => {
     setMessages((prev) => {
       if (prev.length === 0 || (prev.length === 1 && prev[0].id === "welcome")) {
+        const welcomeText = isAllCars
+          ? `Hi ${userName}! I'm EVYatra Assistant. Ask me about any EV, or pick one above.`
+          : `Hi ${userName}! I'm EVYatra Assistant.`;
         return [
           {
             id: "welcome",
             sender: "bot",
-            text: `Hi ${userName}! I'm EVYatra Assistant.`,
+            text: welcomeText,
             timestamp: "Just now",
           },
         ];
       }
       return prev;
     });
-  }, [userName]);
+  }, [userName, isAllCars]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -116,6 +148,41 @@ export default function ChatWidget() {
   // Mock answer fallback strictly for network failure when backend is unreachable
   const getMockReply = (question: string, car: string): { answer: string; sources: string[] } => {
     const q = question.toLowerCase();
+
+    // Check expense questions
+    if (q.includes("expense") || q.includes("toll") || q.includes("spend")) {
+      const stored = getStoredExpenses();
+      if (!stored.length) {
+        return {
+          answer: "You don't have any saved trips or expenses yet. Once you record your trips and charging sessions in EVYatra, I can summarize your total spend, per-trip breakdown, and toll vs. charging splits!",
+          sources: [],
+        };
+      }
+    }
+
+    // Check trip planning without a car
+    if ((q.includes("trip") || q.includes("route") || q.includes("to")) && (car === "all" || car === "All cars") && !q.includes("nexon") && !q.includes("punch") && !q.includes("ioniq")) {
+      return {
+        answer: "Which EV should I plan this for? (e.g. Tata Nexon EV, Hyundai Ioniq 5, MG ZS EV)",
+        sources: [],
+      };
+    }
+
+    // General compare / budget
+    if (q.includes("under") || q.includes("best") || q.includes("budget") || q.includes("compare")) {
+      return {
+        answer: "Top EVs under ₹15 Lakh in India include the MG Comet EV (~₹7.00L), Tata Tiago EV (~₹7.90L), Tata Punch EV (~₹9.99L to ₹14.29L), and Citroën eC3 (~₹12.60L).\n\nTip: The Punch EV offers the longest real-world range (up to 300 km on the LR variant) in this sub-₹15L price bracket.",
+        sources: ["punch-ev.md", "tata-tiago-ev.md"],
+      };
+    }
+
+    if (q.includes("connector") || q.includes("charger") || q.includes("plug") || q.includes("type 2") || q.includes("ccs")) {
+      return {
+        answer: "Universal EV chargers in India include:\n1. CCS2 (Combined Charging System 2): Official standard for fast DC highway charging (25 kW to 350 kW).\n2. Type 2 AC (Mennekes): Universal AC standard for home wallboxes and destination chargers (3.3 kW to 22 kW).\n\nTip: Almost all passenger 4-wheeler EVs in India come equipped with standard CCS2/Type 2 ports.",
+        sources: ["charger-types.md", "charging-cost-tips.md"],
+      };
+    }
+
     const matchedEV = EVS.find(
       (e) => `${e.brand} ${e.name}`.toLowerCase() === car.toLowerCase() ||
              q.includes(e.name.toLowerCase()) ||
@@ -128,13 +195,6 @@ export default function ChatWidget() {
       return {
         answer: `The ${carName} is priced at approximately ₹${matchedEV.priceLakh} Lakh (ex-showroom India).\n\nTip: On-road prices vary by state depending on road tax exemptions and local EV subsidies.`,
         sources: [`${matchedEV.brand.toLowerCase()}-${matchedEV.name.toLowerCase().replace(/\s+/g, '-')}.md`],
-      };
-    }
-
-    if (q.includes("connector") || q.includes("plug") || q.includes("type 2") || q.includes("ccs")) {
-      return {
-        answer: `The ${carName} supports ${matchedEV.connectors.join(" and ")} connectors for charging.\n\nTip: Modern Indian highway chargers widely support CCS2 guns for rapid DC charging.`,
-        sources: ["charger-types.md"],
       };
     }
 
@@ -181,13 +241,17 @@ export default function ChatWidget() {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 12000); // 12s timeout
 
+      const carParam = selectedCar === "All cars" ? "all" : selectedCar;
+      const expensesPayload = getStoredExpenses();
+
       const res = await fetch(`${aiUrl}/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           question: trimmed,
-          car: selectedCar,
+          car: carParam,
           user_name: userName,
+          expenses: expensesPayload,
         }),
         signal: controller.signal,
       });
@@ -398,7 +462,11 @@ export default function ChatWidget() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder={`Ask about ${selectedCar} or charging...`}
+              placeholder={
+                isAllCars
+                  ? "Ask about any EV, route, chargers, or budget..."
+                  : `Ask about ${selectedCar} or charging...`
+              }
               disabled={loading}
               className="flex-1 rounded-2xl bg-mist px-4 py-2.5 text-xs font-semibold outline-none ring-1 ring-line focus:ring-2 focus:ring-brand placeholder:text-muted"
             />

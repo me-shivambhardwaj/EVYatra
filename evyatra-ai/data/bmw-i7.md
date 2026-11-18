@@ -8,7 +8,7 @@ The BMW i7 is an electric vehicle available in the Indian market, manufactured b
 ## Specifications (India Spec)
 - **Brand**: BMW
 - **Model**: i7
-- **Ex-showroom Price (India)**: Approximately ₹213.00 Lakh
+- **Ex-showroom Price (India)**: Approximately ₹213.00 Lakh (₹2.13 Cr)
 - **Battery Capacity**: 101.7 kWh lithium-ion battery pack
 - **Claimed Range**: 625 km
 - **Real-world Estimated Range**: 437 km to 531 km depending on road conditions, payload, and driving style

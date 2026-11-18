@@ -8,7 +8,7 @@ The Mercedes-Benz EQS SUV is an electric vehicle available in the Indian market,
 ## Specifications (India Spec)
 - **Brand**: Mercedes-Benz
 - **Model**: EQS SUV
-- **Ex-showroom Price (India)**: Approximately ₹141.00 Lakh
+- **Ex-showroom Price (India)**: Approximately ₹141.00 Lakh (₹1.41 Cr)
 - **Battery Capacity**: 122.0 kWh lithium-ion battery pack
 - **Claimed Range**: 809 km
 - **Real-world Estimated Range**: 566 km to 687 km depending on road conditions, payload, and driving style

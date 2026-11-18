@@ -8,7 +8,7 @@ The Audi Q8 e-tron is an electric vehicle available in the Indian market, manufa
 ## Specifications (India Spec)
 - **Brand**: Audi
 - **Model**: Q8 e-tron
-- **Ex-showroom Price (India)**: Approximately ₹115.00 Lakh
+- **Ex-showroom Price (India)**: Approximately ₹115.00 Lakh (₹1.15 Cr)
 - **Battery Capacity**: 114.0 kWh lithium-ion battery pack
 - **Claimed Range**: 600 km
 - **Real-world Estimated Range**: 420 km to 510 km depending on road conditions, payload, and driving style

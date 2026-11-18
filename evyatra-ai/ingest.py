@@ -3,11 +3,13 @@ Ingestion script for EVYatra AI RAG knowledge base.
 Rebuilds ./db from markdown documents in ./data/*.md.
 Prefixes each chunk with its file title, stores metadata {car, source},
 and embeds using FastEmbed (BAAI/bge-small-en-v1.5) with langchain_chroma.
-Builds all metadata automatically from data files with zero hardcoding.
+Auto-builds cars_summary.json (name, price, battery, claimed range, real range).
 """
 
 import os
+import re
 import glob
+import json
 import shutil
 from pathlib import Path
 from langchain_community.document_loaders import TextLoader
@@ -18,7 +20,10 @@ from langchain_chroma import Chroma
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
 DB_DIR = BASE_DIR / "db"
+SUMMARY_FILE = BASE_DIR / "cars_summary.json"
 MODEL_NAME = "BAAI/bge-small-en-v1.5"
+
+GENERIC_FILES = {"charger-types.md", "charging-cost-tips.md", "ev-knowledge.md"}
 
 def extract_file_title(filepath: str, default_name: str) -> str:
     """Extracts the first markdown H1 header as title, or falls back to cleaned filename."""
@@ -32,25 +37,78 @@ def extract_file_title(filepath: str, default_name: str) -> str:
         pass
     return default_name.replace(".md", "").replace("-", " ").title()
 
+def extract_price_lakh(price_str: str) -> float:
+    m_lakh = re.search(r'(\d+(?:\.\d+)?)\s*(?:Lakh|L)', price_str, re.IGNORECASE)
+    if m_lakh:
+        return float(m_lakh.group(1))
+    m_cr = re.search(r'(\d+(?:\.\d+)?)\s*(?:Cr|Crore)', price_str, re.IGNORECASE)
+    if m_cr:
+        return float(m_cr.group(1)) * 100.0
+    nums = [float(x) for x in re.findall(r'\d+(?:\.\d+)?', price_str) if float(x) > 0]
+    return nums[0] if nums else 999.0
+
+def get_field(text: str, header_pattern: str) -> str:
+    pattern = rf"- \*\*{header_pattern}\*\*:\s*([^\n]+(?:\n\s+-[^\n]+)*)"
+    m = re.search(pattern, text, re.IGNORECASE)
+    if not m:
+        return "N/A"
+    raw = m.group(1).strip()
+    lines = [re.sub(r"^\s*-\s*", "", l).strip() for l in raw.splitlines() if l.strip()]
+    return " | ".join(lines)
+
+def build_cars_summary():
+    print(f"Building cars_summary.json from {DATA_DIR}...")
+    cars = []
+    for p in sorted(DATA_DIR.glob("*.md")):
+        if p.name in GENERIC_FILES:
+            continue
+        text = p.read_text(encoding="utf-8")
+        title_m = re.search(r"^#\s+(.+)$", text, re.MULTILINE)
+        name = title_m.group(1).strip() if title_m else p.stem.replace("-", " ").title()
+
+        price_str = get_field(text, r"Ex-showroom Price[^*]*")
+        min_p = extract_price_lakh(price_str)
+        bat_str = get_field(text, r"Battery Capacity[^*]*")
+        claimed_str = get_field(text, r"Claimed[^*]*Range[^*]*")
+        real_str = get_field(text, r"Real-world[^*]*Range[^*]*")
+
+        cars.append({
+            "name": name,
+            "file": p.name,
+            "price": price_str,
+            "price_min_lakh": min_p,
+            "battery": bat_str,
+            "claimed_range": claimed_str,
+            "real_range": real_str
+        })
+
+    cars.sort(key=lambda x: x["price_min_lakh"])
+    SUMMARY_FILE.write_text(json.dumps(cars, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Generated cars_summary.json with {len(cars)} cars at {SUMMARY_FILE}")
+    return cars
+
 def ingest():
     print(f"Starting EVYatra ingestion...")
     print(f"Data directory: {DATA_DIR}")
     print(f"Database directory: {DB_DIR}")
 
-    # 1. Delete and rebuild ./db
+    # 1. Build cars summary table
+    build_cars_summary()
+
+    # 2. Delete and rebuild ./db
     if DB_DIR.exists():
         print(f"Deleting existing database directory at {DB_DIR}...")
         shutil.rmtree(DB_DIR, ignore_errors=True)
     DB_DIR.mkdir(parents=True, exist_ok=True)
     print("Clean ./db directory prepared.")
 
-    # 2. Discover markdown files
+    # 3. Discover markdown files
     md_files = glob.glob(str(DATA_DIR / "*.md"))
     if not md_files:
         print(f"No .md files found in {DATA_DIR}")
         return
 
-    # Text splitter: chunk_size 1200, overlap 150 (preserves complete car spec sections)
+    # Text splitter: chunk_size 1200, overlap 150
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=1200,
         chunk_overlap=150,
@@ -69,15 +127,12 @@ def ingest():
 
         file_chunks = splitter.split_documents(docs)
         for chunk in file_chunks:
-            # Prefix each chunk with its file title
             chunk.page_content = f"{title}\n\n{chunk.page_content.strip()}"
-            # Store metadata {car, source} dynamically
             chunk.metadata["car"] = title
             chunk.metadata["source"] = filename
 
         all_chunks.extend(file_chunks)
 
-    # Print chunk count
     chunk_count = len(all_chunks)
     print(f"Total chunks indexed: {chunk_count}")
 

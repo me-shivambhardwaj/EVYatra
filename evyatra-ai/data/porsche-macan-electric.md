@@ -8,7 +8,7 @@ The Porsche Macan Electric is an electric vehicle available in the Indian market
 ## Specifications (India Spec)
 - **Brand**: Porsche
 - **Model**: Macan Electric
-- **Ex-showroom Price (India)**: Approximately ₹123.00 Lakh
+- **Ex-showroom Price (India)**: Approximately ₹123.00 Lakh (₹1.23 Cr)
 - **Battery Capacity**: 100.0 kWh lithium-ion battery pack
 - **Claimed Range**: 613 km
 - **Real-world Estimated Range**: 429 km to 521 km depending on road conditions, payload, and driving style

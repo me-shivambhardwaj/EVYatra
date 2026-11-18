@@ -8,7 +8,7 @@ The Mercedes-Benz EQE SUV is an electric vehicle available in the Indian market,
 ## Specifications (India Spec)
 - **Brand**: Mercedes-Benz
 - **Model**: EQE SUV
-- **Ex-showroom Price (India)**: Approximately ₹139.00 Lakh
+- **Ex-showroom Price (India)**: Approximately ₹139.00 Lakh (₹1.39 Cr)
 - **Battery Capacity**: 90.6 kWh lithium-ion battery pack
 - **Claimed Range**: 550 km
 - **Real-world Estimated Range**: 385 km to 467 km depending on road conditions, payload, and driving style

@@ -2,7 +2,7 @@
   {
     "name": "MG Comet EV",
     "file": "mg-comet-ev.md",
-    "price": "₹7.00 Lakh",
+    "price": "Approximately ₹7.00 Lakh",
     "price_min_lakh": 7.0,
     "battery": "17.3 kWh lithium-ion battery pack",
     "claimed_range": "230 km",
@@ -11,7 +11,7 @@
   {
     "name": "Tata Tiago EV",
     "file": "tata-tiago-ev.md",
-    "price": "₹7.90 Lakh",
+    "price": "Approximately ₹7.90 Lakh",
     "price_min_lakh": 7.9,
     "battery": "24.0 kWh lithium-ion battery pack",
     "claimed_range": "315 km",
@@ -20,25 +20,25 @@
   {
     "name": "Tata Punch EV",
     "file": "punch-ev.md",
-    "price": "₹9.99 Lakh to ₹14.29 Lakh",
+    "price": "Approximately ₹9.99 Lakh to ₹14.29 Lakh",
     "price_min_lakh": 9.99,
-    "battery": "25 kWh / 35 kWh",
-    "claimed_range": "315 km / 421 km / 200 km / 220 km / 270 km / 300 km / 100 km",
-    "real_range": "0-100 km"
+    "battery": "Standard (MR): 25 kWh liquid-cooled battery pack | Long Range (LR): 35 kWh liquid-cooled battery pack",
+    "claimed_range": "Standard: 315 km | Long Range: 421 km",
+    "real_range": "Standard: 200 km to 220 km | Long Range: 270 km to 300 km"
   },
   {
     "name": "Tata Nexon EV",
     "file": "nexon-ev.md",
-    "price": "₹12.49 Lakh to ₹17.19 Lakh",
+    "price": "Approximately ₹12.49 Lakh to ₹17.19 Lakh",
     "price_min_lakh": 12.49,
-    "battery": "30 kWh / 45 kWh",
-    "claimed_range": "325 km / 489 km / 210 km / 240 km / 310 km / 360 km / 100 km",
-    "real_range": "0-100 km"
+    "battery": "Medium Range (MR): 30 kWh liquid-cooled LFP battery pack | Long Range (LR): 45 kWh liquid-cooled LFP battery pack",
+    "claimed_range": "Medium Range: 325 km | Long Range: 489 km",
+    "real_range": "Medium Range: 210 km to 240 km | Long Range: 310 km to 360 km"
   },
   {
     "name": "Citroën eC3",
     "file": "citroen-ec3.md",
-    "price": "₹12.60 Lakh",
+    "price": "Approximately ₹12.60 Lakh",
     "price_min_lakh": 12.6,
     "battery": "29.2 kWh lithium-ion battery pack",
     "claimed_range": "320 km",
@@ -47,7 +47,7 @@
   {
     "name": "MG Windsor EV",
     "file": "mg-windsor-ev.md",
-    "price": "₹14.00 Lakh",
+    "price": "Approximately ₹14.00 Lakh",
     "price_min_lakh": 14.0,
     "battery": "38.0 kWh lithium-ion battery pack",
     "claimed_range": "332 km",
@@ -56,7 +56,7 @@
   {
     "name": "Mahindra XUV400",
     "file": "mahindra-xuv400.md",
-    "price": "₹15.50 Lakh",
+    "price": "Approximately ₹15.50 Lakh",
     "price_min_lakh": 15.5,
     "battery": "39.4 kWh lithium-ion battery pack",
     "claimed_range": "456 km",
@@ -65,7 +65,7 @@
   {
     "name": "Tata Curvv EV",
     "file": "tata-curvv-ev.md",
-    "price": "₹17.50 Lakh",
+    "price": "Approximately ₹17.50 Lakh",
     "price_min_lakh": 17.5,
     "battery": "55.0 kWh lithium-ion battery pack",
     "claimed_range": "502 km",
@@ -74,7 +74,7 @@
   {
     "name": "Hyundai Creta Electric",
     "file": "hyundai-creta-electric.md",
-    "price": "₹18.00 Lakh",
+    "price": "Approximately ₹18.00 Lakh",
     "price_min_lakh": 18.0,
     "battery": "51.4 kWh lithium-ion battery pack",
     "claimed_range": "473 km",
@@ -83,7 +83,7 @@
   {
     "name": "Mahindra BE 6",
     "file": "mahindra-be-6.md",
-    "price": "₹18.90 Lakh",
+    "price": "Approximately ₹18.90 Lakh",
     "price_min_lakh": 18.9,
     "battery": "59.0 kWh lithium-ion battery pack",
     "claimed_range": "557 km",
@@ -92,7 +92,7 @@
   {
     "name": "MG ZS EV",
     "file": "mg-zs-ev.md",
-    "price": "₹18.98 Lakh",
+    "price": "Approximately ₹18.98 Lakh",
     "price_min_lakh": 18.98,
     "battery": "50.3 kWh lithium-ion battery pack",
     "claimed_range": "461 km",
@@ -101,7 +101,7 @@
   {
     "name": "BYD Atto 3",
     "file": "byd-atto-3.md",
-    "price": "₹24.99 Lakh",
+    "price": "Approximately ₹24.99 Lakh",
     "price_min_lakh": 24.99,
     "battery": "60.5 kWh lithium-ion battery pack",
     "claimed_range": "521 km",
@@ -110,7 +110,7 @@
   {
     "name": "BYD eMAX 7",
     "file": "byd-emax-7.md",
-    "price": "₹26.90 Lakh",
+    "price": "Approximately ₹26.90 Lakh",
     "price_min_lakh": 26.9,
     "battery": "71.8 kWh lithium-ion battery pack",
     "claimed_range": "530 km",
@@ -119,7 +119,7 @@
   {
     "name": "BYD Seal",
     "file": "byd-seal.md",
-    "price": "₹41.00 Lakh",
+    "price": "Approximately ₹41.00 Lakh",
     "price_min_lakh": 41.0,
     "battery": "82.5 kWh lithium-ion battery pack",
     "claimed_range": "650 km",
@@ -128,7 +128,7 @@
   {
     "name": "Hyundai Ioniq 5",
     "file": "ioniq-5.md",
-    "price": "₹46.05 Lakh",
+    "price": "Approximately ₹46.05 Lakh",
     "price_min_lakh": 46.05,
     "battery": "72.6 kWh lithium-ion battery pack",
     "claimed_range": "631 km on a single full charge",
@@ -137,7 +137,7 @@
   {
     "name": "BYD Sealion 7",
     "file": "byd-sealion-7.md",
-    "price": "₹48.00 Lakh",
+    "price": "Approximately ₹48.00 Lakh",
     "price_min_lakh": 48.0,
     "battery": "82.5 kWh lithium-ion battery pack",
     "claimed_range": "550 km",
@@ -146,7 +146,7 @@
   {
     "name": "Volvo EX40",
     "file": "volvo-ex40.md",
-    "price": "₹56.10 Lakh",
+    "price": "Approximately ₹56.10 Lakh",
     "price_min_lakh": 56.1,
     "battery": "69.0 kWh lithium-ion battery pack",
     "claimed_range": "475 km",
@@ -155,7 +155,7 @@
   {
     "name": "Kia EV6",
     "file": "kia-ev6.md",
-    "price": "₹60.95 Lakh",
+    "price": "Approximately ₹60.95 Lakh",
     "price_min_lakh": 60.95,
     "battery": "77.4 kWh lithium-ion battery pack",
     "claimed_range": "708 km",
@@ -164,7 +164,7 @@
   {
     "name": "MG Cyberster",
     "file": "mg-cyberster.md",
-    "price": "₹65.00 Lakh",
+    "price": "Approximately ₹65.00 Lakh",
     "price_min_lakh": 65.0,
     "battery": "77.0 kWh lithium-ion battery pack",
     "claimed_range": "508 km",
@@ -173,7 +173,7 @@
   {
     "name": "Mercedes-Benz EQA",
     "file": "mercedes-benz-eqa.md",
-    "price": "₹66.00 Lakh",
+    "price": "Approximately ₹66.00 Lakh",
     "price_min_lakh": 66.0,
     "battery": "70.5 kWh lithium-ion battery pack",
     "claimed_range": "560 km",
@@ -182,7 +182,7 @@
   {
     "name": "BMW iX1",
     "file": "bmw-ix1.md",
-    "price": "₹66.90 Lakh",
+    "price": "Approximately ₹66.90 Lakh",
     "price_min_lakh": 66.9,
     "battery": "66.4 kWh lithium-ion battery pack",
     "claimed_range": "440 km",
@@ -191,7 +191,7 @@
   {
     "name": "MG M9 EV",
     "file": "mg-m9-ev.md",
-    "price": "₹70.00 Lakh",
+    "price": "Approximately ₹70.00 Lakh",
     "price_min_lakh": 70.0,
     "battery": "90.5 kWh lithium-ion battery pack",
     "claimed_range": "548 km",
@@ -200,7 +200,7 @@
   {
     "name": "BMW i4",
     "file": "bmw-i4.md",
-    "price": "₹72.50 Lakh",
+    "price": "Approximately ₹72.50 Lakh",
     "price_min_lakh": 72.5,
     "battery": "83.9 kWh lithium-ion battery pack",
     "claimed_range": "590 km",
@@ -209,7 +209,7 @@
   {
     "name": "Mercedes-Benz EQB",
     "file": "mercedes-benz-eqb.md",
-    "price": "₹77.50 Lakh",
+    "price": "Approximately ₹77.50 Lakh",
     "price_min_lakh": 77.5,
     "battery": "70.5 kWh lithium-ion battery pack",
     "claimed_range": "535 km",
@@ -218,7 +218,7 @@
   {
     "name": "Audi Q6 e-tron",
     "file": "audi-q6-e-tron.md",
-    "price": "₹85.00 Lakh",
+    "price": "Approximately ₹85.00 Lakh",
     "price_min_lakh": 85.0,
     "battery": "100.0 kWh lithium-ion battery pack",
     "claimed_range": "625 km",
@@ -227,7 +227,7 @@
   {
     "name": "Audi Q8 e-tron",
     "file": "audi-q8-e-tron.md",
-    "price": "₹115.00 Lakh",
+    "price": "Approximately ₹115.00 Lakh (₹1.15 Cr)",
     "price_min_lakh": 115.0,
     "battery": "114.0 kWh lithium-ion battery pack",
     "claimed_range": "600 km",
@@ -236,7 +236,7 @@
   {
     "name": "BMW i5",
     "file": "bmw-i5.md",
-    "price": "₹120.00 Lakh",
+    "price": "Approximately ₹120.00 Lakh (₹1.20 Cr)",
     "price_min_lakh": 120.0,
     "battery": "81.2 kWh lithium-ion battery pack",
     "claimed_range": "516 km",
@@ -245,7 +245,7 @@
   {
     "name": "Tesla Model Y",
     "file": "tesla-model-y.md",
-    "price": "₹120.00 Lakh",
+    "price": "Approximately ₹120.00 Lakh (₹1.20 Cr)",
     "price_min_lakh": 120.0,
     "battery": "100.0 kWh lithium-ion battery pack",
     "claimed_range": "652 km",
@@ -254,7 +254,7 @@
   {
     "name": "BMW iX",
     "file": "bmw-ix.md",
-    "price": "₹121.00 Lakh",
+    "price": "Approximately ₹121.00 Lakh (₹1.21 Cr)",
     "price_min_lakh": 121.0,
     "battery": "76.6 kWh lithium-ion battery pack",
     "claimed_range": "425 km",
@@ -263,7 +263,7 @@
   {
     "name": "Porsche Macan Electric",
     "file": "porsche-macan-electric.md",
-    "price": "₹123.00 Lakh",
+    "price": "Approximately ₹123.00 Lakh (₹1.23 Cr)",
     "price_min_lakh": 123.0,
     "battery": "100.0 kWh lithium-ion battery pack",
     "claimed_range": "613 km",
@@ -272,7 +272,7 @@
   {
     "name": "Kia EV9",
     "file": "kia-ev9.md",
-    "price": "₹130.00 Lakh",
+    "price": "Approximately ₹130.00 Lakh (₹1.30 Cr)",
     "price_min_lakh": 130.0,
     "battery": "99.8 kWh lithium-ion battery pack",
     "claimed_range": "561 km",
@@ -281,7 +281,7 @@
   {
     "name": "Mercedes-Benz EQE SUV",
     "file": "mercedes-benz-eqe-suv.md",
-    "price": "₹139.00 Lakh",
+    "price": "Approximately ₹139.00 Lakh (₹1.39 Cr)",
     "price_min_lakh": 139.0,
     "battery": "90.6 kWh lithium-ion battery pack",
     "claimed_range": "550 km",
@@ -290,7 +290,7 @@
   {
     "name": "Mercedes-Benz EQS SUV",
     "file": "mercedes-benz-eqs-suv.md",
-    "price": "₹141.00 Lakh",
+    "price": "Approximately ₹141.00 Lakh (₹1.41 Cr)",
     "price_min_lakh": 141.0,
     "battery": "122.0 kWh lithium-ion battery pack",
     "claimed_range": "809 km",
@@ -299,7 +299,7 @@
   {
     "name": "Porsche Taycan",
     "file": "porsche-taycan.md",
-    "price": "₹161.00 Lakh",
+    "price": "Approximately ₹161.00 Lakh (₹1.61 Cr)",
     "price_min_lakh": 161.0,
     "battery": "89.0 kWh lithium-ion battery pack",
     "claimed_range": "678 km",
@@ -308,7 +308,7 @@
   {
     "name": "BMW i7",
     "file": "bmw-i7.md",
-    "price": "₹213.00 Lakh",
+    "price": "Approximately ₹213.00 Lakh (₹2.13 Cr)",
     "price_min_lakh": 213.0,
     "battery": "101.7 kWh lithium-ion battery pack",
     "claimed_range": "625 km",
