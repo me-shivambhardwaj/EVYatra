@@ -1,5 +1,6 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
+import "maplibre-gl/dist/maplibre-gl.css";
 import { 
   Globe2, 
   Leaf, 
@@ -282,7 +283,7 @@ export default function IndiaEVMap() {
             </div>
 
             {/* Stylized SVG Map of India with Interactive Hubs */}
-            <div className="relative mt-6 h-[460px] w-full flex items-center justify-center">
+            <div className="relative mt-6 h-[320px] md:h-[420px] w-full flex items-center justify-center rounded-2xl overflow-hidden">
               <svg
                 viewBox="0 0 100 100"
                 className="h-full w-full max-h-[460px] drop-shadow-[0_0_25px_rgba(22,163,74,0.15)]"

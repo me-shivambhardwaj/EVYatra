@@ -2,13 +2,13 @@ import type { EV } from "@/lib/types";
 
 // EV specifications and approximate ex-showroom India prices (in Lakhs)
 // Premium and Luxury flagships ordered at the top
-export const EVS: EV[] = [
+const unsortedEVS: EV[] = [
   // --- Ultra Luxury & High-Performance Electric Vehicles (Top) ---
   {
     id: "porsche-taycan",
     name: "Taycan",
     brand: "Porsche",
-    priceLakh: 161.0,
+    priceLakh: 207.0, // Updated per official Porsche India pricing
     rangeKm: 678,
     batteryKwh: 89,
     fastChargeMin: 18,
@@ -23,7 +23,7 @@ export const EVS: EV[] = [
     name : "IONIQ 5",
     brand : "Hyundai",
     priceLakh : 59.0,
-    rangeKm : 480,
+    rangeKm : 690, // Updated per official Hyundai India range
     batteryKwh : 72.6,
     fastChargeMin : 18,
     maxDcKw : 220,
@@ -88,7 +88,7 @@ export const EVS: EV[] = [
     id: "porsche-macan-electric",
     name: "Macan Electric",
     brand: "Porsche",
-    priceLakh: 123.0,
+    priceLakh: 121.62, // Updated per official Porsche India pricing
     rangeKm: 613,
     batteryKwh: 100,
     fastChargeMin: 21,
@@ -409,7 +409,7 @@ export const EVS: EV[] = [
     maxDcKw: 60,
     connectors: ["CCS2", "Type 2"],
     segment: "mass",
-    image: "/cars/tata-nexon-ev.webp.png",
+    image: "/cars/tata-nexon-ev.webp.webp",   
   },
   {
     id: "citroen-ec3",
@@ -422,7 +422,7 @@ export const EVS: EV[] = [
     maxDcKw: 30,
     connectors: ["CCS2", "Type 2"],
     segment: "mass",
-    image: "/cars/citroen-ec3.webp.png",
+    image: "/cars/citroen-ec3.webp.webp",  
   },
   {
     id: "tata-punch-ev",
@@ -464,3 +464,8 @@ export const EVS: EV[] = [
     image: "/cars/mg-comet-ev.webp.png",
   },
 ];
+
+// Sorted by price low to high
+export const EVS = unsortedEVS.sort((a, b) => a.priceLakh - b.priceLakh);
+
+// Unverified entries (could not verify): see verification_report.md
